@@ -1,0 +1,33 @@
+@baseURL = {{$dotenv BASE_URL}}
+@apikey = {{$dotenv API_KEY}}
+
+POST {{baseURL}} HTTP/1.1
+x-api-key: {{apikey}}
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="text"
+
+Felippe, como o Face ID do iPhone consegue me reconhecer tão rápido?
+Tudo começa com a câmera TrueDepth projetando cerca de 30 mil pontos infravermelhos no seu rosto para gerar um mapa de profundidade em 3D. Esse mapa é combinado a uma foto infravermelha, criando uma assinatura biométrica única.
+Em seguida, o Neural Engine processa esses dados localmente e compara com o modelo salvo no Secure Enclave. Se a similaridade ultrapassa o limiar de confiança, o aparelho desbloqueia—tudo em milissegundos.
+Então meus dados faciais ficam seguros mesmo se alguém invadir o sistema?
+Exato. O modelo facial é criptografado e guardado dentro do Secure Enclave, um coprocessador isolado; ele nunca sai do dispositivo nem vai para a nuvem.
+Mas ele funciona no escuro total?
+Funciona, porque há um iluminador infravermelho que banha seu rosto numa luz invisível. Assim, a câmera infravermelha enxerga perfeitamente mesmo na ausência de luz visível.
+E se eu deixar a barba crescer ou colocar óculos novos?
+O Face ID aprende gradualmente. Quando detecta pequenas mudanças, ele atualiza seu modelo após um desbloqueio bem-sucedido. Se falhar, digitar o código ajuda a reforçar a nova aparência.
+Fotos ou vídeos podem enganar o sistema?
+É muito difícil. Como ele usa profundidade real, imagens 2D não apresentam o relevo correto. Além disso, há detecção de atenção e micro-movimentos que exigem um rosto vivo.
+Ouvi dizer que a Apple quer esconder tudo isso debaixo da tela. Isso é verdade?
+Rumores indicam que a geração iPhone 18 trará Face ID sob o display, eliminando o notch. A Apple já testa transmissores e receptores infravermelhos que funcionam através dos pixels, mas a estreia comercial deve ocorrer em 2025.
+Impressionante! Então o futuro é uma tela sem recortes?
+Exatamente. A tecnologia evolui para ficar invisível, mantendo a segurança que já conhecemos.
+Conta pra gente nos comentários o que mais te surpreendeu no Face ID ou o que você quer descobrir nos próximos vídeos!
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="audio_file"; filename="audio.wav"
+Content-Type: audio/wav
+
+< /home/felippe/Projects/modal_mfa/test.wav
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+
