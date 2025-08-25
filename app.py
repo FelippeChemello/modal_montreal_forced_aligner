@@ -22,7 +22,7 @@ image = (
 
 app = modal.App("modal-mfa")
 
-@app.cls(gpu=None, image=image, timeout=120, secrets=[modal.Secret.from_name("mfa-secret")])
+@app.cls(gpu=None, image=image, timeout=300, secrets=[modal.Secret.from_name("mfa-secret")])
 class Model:
     def inference(self, text: str, audio_bytes: bytes):
         tmp = tempfile.mkdtemp()
